@@ -4,7 +4,7 @@ import {Contact, EntityContact} from "../protocols/contact.protocol.js";
 
 
 export function contactSchemaValidation(req: Request, res: Response, next) {
-  const newContact = req.body as Contact;
+  const newContact = req.body;
 
   const { error } = contactSchema.validate(newContact, { abortEarly: false });
 
